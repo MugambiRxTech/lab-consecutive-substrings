@@ -1,2 +1,91 @@
 Please add your pseudocode to this file
+Project: Consecutive Substrings Generator
+
+Pseudocode Solution
+
+START
+
+INPUT string S
+CREATE empty list RESULT
+
+FOR i from 0 to length of S minus 1
+    SET currentSubstring to empty string
+
+    FOR j from i to length of S minus 1
+        ADD character S[j] to currentSubstring
+        ADD currentSubstring to RESULT
+    END FOR
+
+END FOR
+
+RETURN RESULT
+
+END
+
+
+Explanation
+
+The string is treated like an array of characters.
+The first loop selects where the substring starts.
+The second loop builds the substring one character at a time.
+Each substring is saved immediately so the order is preserved.
+
 And a written explanation of your solution
+Project: Consecutive Substrings Generator
+
+
+Problem Overview
+
+This project focuses on generating all consecutive substrings from a given
+string input. A consecutive substring is made up of characters that appear
+next to each other in the original string and must contain at least one
+character. The substrings are returned in the same order in which they appear
+in the string.
+
+Only valid consecutive substrings are allowed. For example, in the string
+"abc", the substring "ac" is not included because the characters are not
+adjacent. The input string may be empty or contain one or more characters.
+
+
+Algorithm Used
+
+The solution uses a brute-force approach with nested loops. The string is
+treated as an array of characters and each possible starting position is
+examined.
+
+The outer loop selects the starting index of a substring. The inner loop
+extends the substring one character at a time by moving forward through the
+string. Each newly created substring is stored in a result array in the order
+it appears.
+
+This approach was chosen because it guarantees that all valid consecutive substrings are generated correctly.
+
+
+How the Solution Works
+
+1. Initialize an empty array to store the substrings.
+2. Loop through the string to select a starting index.
+3. From each starting index, build substrings by adding one character at a time.
+4. Store each substring as it is created.
+5. Return the array containing all consecutive substrings.
+
+
+Time Complexity Analysis
+
+Let n be the length of the input string.
+
+The solution uses two nested loops, which results in O(n²) iterations.
+However, building each substring requires copying characters, which adds
+additional processing time.
+
+Overall time complexity: O(n³)
+
+The space complexity is O(n³) since all generated substrings are stored.
+
+
+Conclusion
+
+This project successfully generates all consecutive substrings of a string
+while maintaining the correct order. The algorithm meets the problem
+requirements and includes a clear analysis of how performance scales as the
+input size increases.
